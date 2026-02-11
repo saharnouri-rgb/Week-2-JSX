@@ -4,20 +4,39 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pricing Plans — HTML version</title>
+
+    <!-- Google Fonts: Inter typeface (weights: 400, 500, 600, 700) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Main stylesheet -->
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+
+    <!-- Page Label: Fixed badge at top indicating this is the HTML version -->
     <p class="page-label"><strong>HTML version</strong> — static markup</p>
+
+    <!-- ================================
+         PRICING CARDS CONTAINER
+         Holds all pricing tier cards
+         ================================ -->
     <div class="cards-container">
+
+        <!-- ==================
+             HOBBY TIER CARD
+             Free plan option
+             ================== -->
         <div class="card">
+            <!-- Card Header: Title + Price -->
             <div class="card-top">
                 <h3 class="card-title">Hobby</h3>
                 <p class="card-price">
                     <span class="card-price-amount">Free</span>
                 </p>
+
+                <!-- Features Section -->
                 <div class="card-content">
                     <p class="includes-text">Includes:</p>
                     <ul class="features-list">
@@ -36,15 +55,28 @@
                     </ul>
                 </div>
             </div>
+
+            <!-- CTA Button: Secondary style (gray background) -->
             <button class="download-button secondary">Download</button>
         </div>
+
+        <!-- ==================
+             PRO TIER CARD
+             Paid plan option
+             ================== -->
         <div class="card">
+            <!-- Card Header: Title + Price -->
             <div class="card-top">
                 <h3 class="card-title">Pro</h3>
                 <p class="card-price">
                     <span class="card-price-amount">$20</span>
                     <span class="card-price-period">/mo.</span>
                 </p>
+                <div class="card-content">
+                    <p class="includes-text">Everything in Hobby, plus:</p>
+                </div>
+
+                <!-- Features Section -->
                 <div class="card-content">
                     <p class="includes-text">Everything in Hobby, plus:</p>
                     <ul class="features-list">
@@ -66,9 +98,58 @@
                         </li>
                     </ul>
                 </div>
+                <button class="download-button primary">Get Pro</button>
             </div>
-            <button class="download-button primary">Get Pro</button>
+
+            <!-- CTA Button: Primary style (dark background) -->
         </div>
+
+        <!-- ==================
+             ENTERPRISE TIER CARD
+             Custom pricing for teams
+             ================== -->
+        <div class="card">
+            <!-- Card Header: Title + Price -->
+            <div class="card-top">
+                <h3 class="card-title">Enterprise</h3>
+                <p class="card-price">
+                    <span class="card-price-amount">Custom</span>
+                </p>
+
+                <!-- Features Section -->
+                <div class="card-content">
+                    <p class="includes-text">Everything in Pro, plus:</p>
+                    <ul class="features-list">
+                        <li>
+                            <span class="checkmark">✓</span>
+                            SSO & SAML authentication
+                        </li>
+                        <li>
+                            <span class="checkmark">✓</span>
+                            Dedicated account manager
+                        </li>
+                        <li>
+                            <span class="checkmark">✓</span>
+                            Custom usage limits
+                        </li>
+                        <li>
+                            <span class="checkmark">✓</span>
+                            Priority support
+                        </li>
+                        <li>
+                            <span class="checkmark">✓</span>
+                            Advanced security controls
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- CTA Button: Secondary style (contact sales) -->
+            <button class="download-button secondary">Contact Sales</button>
+        </div>
+
     </div>
+    <!-- End cards-container -->
+
 </body>
 </html>

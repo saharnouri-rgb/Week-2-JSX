@@ -1,12 +1,26 @@
+/* ========================================
+   PRICING PLANS — STYLESHEET
+   ======================================== */
+
+
+/* ----------------------------------------
+   RESET & BASE STYLES
+   Removes default browser spacing
+   ---------------------------------------- */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+
+/* ----------------------------------------
+   BODY
+   Page layout: centered content, light bg
+   ---------------------------------------- */
 body {
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-    background-color: #f7f7f4;
+    background-color: #f7f7f4;      /* Light warm gray */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -14,42 +28,67 @@ body {
     padding: 20px;
 }
 
+
+/* ========================================
+   CARDS CONTAINER
+   Flexbox wrapper for pricing cards
+   ======================================== */
 .cards-container {
     display: flex;
     flex-direction: row;
-    gap: 24px;
+    gap: 24px;                      /* Space between cards */
     flex-wrap: nowrap;
     justify-content: center;
     align-items: flex-start;
 }
 
+
+/* ========================================
+   CARD — Base Component
+   Individual pricing card styles
+   ======================================== */
 .card {
     display: flex;
     flex-direction: column;
     min-height: 380px;
-    background-color: #f2f1ed;
+    background-color: #f2f1ed;      /* Slightly darker than body */
     border-radius: 4px;
     padding: 16px;
     width: 320px;
-    flex-shrink: 0;
+    flex-shrink: 0;                 /* Prevents card from shrinking */
 }
 
+
+/* ----------------------------------------
+   CARD TOP SECTION
+   Contains title, price, and features
+   ---------------------------------------- */
 .card-top {
     display: flex;
     flex-direction: column;
 }
 
+
+/* ----------------------------------------
+   CARD TITLE
+   Plan name (Hobby, Pro, etc.)
+   ---------------------------------------- */
 .card-title {
     font-size: 22px;
     line-height: 28px;
     font-weight: 400;
-    color: #26251e;
+    color: #26251e;                 /* Dark charcoal */
     margin-bottom: 8px;
 }
 
+
+/* ----------------------------------------
+   CARD PRICE
+   Price display with amount + period
+   ---------------------------------------- */
 .card-price {
     font-size: 20px;
-    color: rgba(38, 37, 30, 0.5);
+    color: rgba(38, 37, 30, 0.5);   /* 50% opacity dark */
     display: inline-flex;
     align-items: baseline;
 }
@@ -65,6 +104,11 @@ body {
     color: rgba(38, 37, 30, 0.5);
 }
 
+
+/* ----------------------------------------
+   CARD CONTENT
+   Features list wrapper
+   ---------------------------------------- */
 .card-content {
     margin-bottom: 32px;
 }
@@ -75,6 +119,11 @@ body {
     margin: 16px 0px;
 }
 
+
+/* ----------------------------------------
+   FEATURES LIST
+   Checkmark list of plan features
+   ---------------------------------------- */
 .features-list {
     list-style: none;
     padding: 0;
@@ -95,12 +144,19 @@ body {
     font-weight: 400;
 }
 
+
+/* ========================================
+   CTA BUTTONS
+   Call-to-action buttons at card bottom
+   ======================================== */
+
+/* Base button styles (secondary/default) */
 .download-button {
-    margin-top: auto;
+    margin-top: auto;               /* Pushes button to bottom */
     width: fit-content;
-    background-color: #e6e5e0;
+    background-color: #e6e5e0;      /* Light gray */
     border: none;
-    border-radius: 999px;
+    border-radius: 999px;           /* Pill shape */
     padding: 14px 24px;
     font-size: 16px;
     font-weight: 500;
@@ -109,14 +165,17 @@ body {
     transition: background-color 0.2s ease;
 }
 
+/* Secondary button hover state */
 .download-button:hover {
     background-color: #D8D6CE;
 }
 
+/* Secondary button active state */
 .download-button:active {
     background-color: #D8D6CE;
 }
 
+/* Primary button variant (dark) */
 .download-button.primary {
     background-color: #111;
     color: #fff;
@@ -130,11 +189,16 @@ body {
     background-color: #333;
 }
 
+
+/* ========================================
+   PAGE LABEL
+   Fixed badge showing version info
+   ======================================== */
 .page-label {
     position: fixed;
     top: 16px;
     left: 50%;
-    transform: translateX(-50%);
+    transform: translateX(-50%);    /* Centers horizontally */
     font-size: 14px;
     color: #666;
     background: #fff;
